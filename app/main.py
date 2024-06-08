@@ -2,6 +2,8 @@ from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from motor.motor_asyncio import AsyncIOMotorClient
+
 app = FastAPI(
     title="FastAPI Starter",
     description="FastAPI Starter Template",
@@ -9,6 +11,11 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url=None,
 )
+
+# MongoDB connection URL
+MONGO_URL = "mongodb://root:secret@localhost:27017/'"
+client = AsyncIOMotorClient(MONGO_URL)
+database = client["fastapi_db"]
 
 
 class User(BaseModel):

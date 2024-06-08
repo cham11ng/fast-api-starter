@@ -52,7 +52,7 @@ pretty: ## Prettify project.
 	@${PYTHON} -m black .
 
 run: ## Run application.
-	@${PYTHON} -m flask --app src/app run
+	@${PYTHON} -m uvicorn app/main:app --reload
 
 debug: ## Debug application.
 	@${PYTHON} -m flask --app src/app --debug run

@@ -23,6 +23,4 @@ To get started with the fastapi-starter project, follow these steps:
 4. Run the application: `python main.py`
 5. Access the API documentation at `http://localhost:8000/docs`.
 
-For more detailed instructions and examples, please refer to the project's [documentation](https://github.com/your-username/fastapi-starter).
-
 Happy coding!
